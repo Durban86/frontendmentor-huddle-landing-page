@@ -5,3 +5,128 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-mobile.svg);
+    background-color: hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 375px;
+    margin-top: 24px;
+}
+
+.container > img {
+    width: 150px;
+    align-self: flex-start;
+    margin-bottom: 64px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: hsl(0,0%,100%);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content > img {
+    width: 375px;
+    margin-bottom: 64px;
+}
+
+.info h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+}
+
+button {
+    width: 200px;
+    padding: 16px;
+    background-color: hsl(0,0%,100%);
+    color: hsl(257, 40%, 49%);
+    border-radius: 50px;
+    border: none;
+    box-shadow: 5px 5px 8px hsl(0,0%,0%, .2);
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 48px;
+}
+
+button:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: hsl(0,0%,100%);
+}
+
+.social-icons {
+    max-width: 250px;
+    display: flex;
+
+}
+
+ion-icon {
+    width: 50px;
+    height: 50px;
+    color: hsl(0,0%,100%);
+    margin: 8px;
+}
+
+ion-icon:hover {
+    color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 749px){
+    body {
+        background-position: top;
+        background-size: 100vw 60vh;
+    }
+}
+
+
+@media (min-width: 750px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+    }
+    .container {
+        min-width:75vw;
+    }
+    
+    .content {
+        flex-direction: row;
+        text-align: left;
+    }
+    .content > img {
+        width: 50%;
+        margin-right: 48px;
+    }
+    .info {
+        margin-top: 32px;
+    }
+    .info h1 {
+        font-size: 40px;
+    }
+    .description {
+        padding: 0;
+    }
+    .social-icons {
+        align-self: flex-end;
+    }
+}
